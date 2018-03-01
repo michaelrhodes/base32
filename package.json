@@ -1,0 +1,12 @@
+{
+  "name": "base32",
+  "version": "1.0.0",
+  "author": "Michael Rhodes",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "benchmark": "~2.1.4",
+    "thirty-two": "~1.0.2",
+    "u8a": "~1.0.0"
+  }
+}

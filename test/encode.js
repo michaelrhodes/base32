@@ -1,0 +1,13 @@
+var assert = require('assert')
+var encode = require('../encode')
+var u8a = require('u8a/from-string')
+
+assert.deepEqual(encode(u8a('a')), u8a('ME======'))
+assert.deepEqual(encode(u8a('be')), u8a('MJSQ===='))
+assert.deepEqual(encode(u8a('son')), u8a('ONXW4==='))
+assert.deepEqual(encode(u8a('bee')), u8a('MJSWK==='))
+assert.deepEqual(encode(u8a('beer')), u8a('MJSWK4Q='))
+assert.deepEqual(encode(u8a('beers')), u8a('MJSWK4TT'))
+assert.deepEqual(encode(u8a('beerson')), u8a('MJSWK4TTN5XA===='))
+assert.deepEqual(encode(u8a('beers 1')), u8a('MJSWK4TTEAYQ===='))
+assert.deepEqual(encode(u8a('shockingly dismissed')), u8a('ONUG6Y3LNFXGO3DZEBSGS43NNFZXGZLE'))
